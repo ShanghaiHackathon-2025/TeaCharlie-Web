@@ -40,7 +40,7 @@
         /* linear-gradient(to bottom, rgba(0,0,0,0) 70%, #56b05a 100%),  */ /* 背景底部渐变，视情况而加 */
         url('https://static.teacharlie.com/5df6221ca43e0a04e49bb4ccf290dfe4.jpg') no-repeat;
     background-size: cover;
-    background-color: #56b05a;
+    background-color: #c1eae6;
     filter: blur(5px);
     z-index: -1;
 }

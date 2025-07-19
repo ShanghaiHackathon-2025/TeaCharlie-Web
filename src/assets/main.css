@@ -1,4 +1,4 @@
-@import url('/src/assets/base.css');
+/* @import url('/src/assets/base.css'); */
 @import url('https://fonts.itedev.com/unifont/index.css');
 
 * {
@@ -19,15 +19,28 @@ html {
 a {
   color: #7c471d;
   text-decoration: none;
-  border: 2px solid #ffffff00;
+  border: .2rem ridge #ffffff00;
   padding: .2rem .5rem;
 }
 
 a:hover {
-  border: 2px solid #642d00;
+  border: .2rem ridge #efcb90;
 }
 
 ::selection {
   color: #7c471d;
   background-color: rgba(0, 212, 0, 0.349);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: #efcb90;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c471d;
 }

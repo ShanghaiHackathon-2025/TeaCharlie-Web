@@ -9,11 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-    // {
-    //   path: '/download',
-    //   name: 'download',
-    //   component: () => import('../views/DownloadView.vue'),
-    // },
+    {
+      path: '/download',
+      name: 'download',
+      component: () => import('../views/DownloadView.vue'),
+    },
   ],
 })
 

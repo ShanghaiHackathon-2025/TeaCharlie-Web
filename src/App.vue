@@ -17,7 +17,7 @@ import NavBar from './components/NavBar.vue'
     </header>
     <main>
       <div class="main-container">
-        <RouterView />
+          <RouterView />
       </div>
     </main>
   </div>
@@ -60,6 +60,7 @@ import NavBar from './components/NavBar.vue'
   color: #7c471d;
 }
 
+/*! main 与 main-container 不可以加背景颜色否则会覆盖掉主页的背景图片 */
 main {
   height: 100%;
   width: 100%;
