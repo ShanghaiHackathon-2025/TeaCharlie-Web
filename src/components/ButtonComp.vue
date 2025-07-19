@@ -34,22 +34,21 @@ const handleClick = (event: MouseEvent) => {
 </script>
 <style lang="css" scoped>
 .button-comp {
-  background-color: #6dff727d;
-  border: 4px ridge #4CAF50;
-  color: white;
+  background-color: #edab75;
+  border: 0.2rem solid #7c471d;
+  color: #7c471d;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
 .button-comp a {
   width: 100%;
   height: 100%;
   display: block;
-   color: white;
-  text-align: center;
-  text-decoration: none;
+
 }
 
 .button-comp a:hover {
