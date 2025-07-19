@@ -43,14 +43,12 @@ import ButtonComp from '@/components/ButtonComp.vue'
 
 <style>
 .download-view {
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: #c1eae6;
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .download-view .title {
@@ -60,34 +58,36 @@ import ButtonComp from '@/components/ButtonComp.vue'
 }
 
 .download-view .download-info-card-container {
-  min-width: 80vw;
-  height: 70vh;
+  width: 80%;
+  min-height: 60vh;
   background-color: #edab75;
   border: 1rem ridge #7c471d;
-  padding: 1vh 2vw;
-  overflow: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .download-view .download-info-card-container .download-info-card-device {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
   gap: 1rem;
 }
 
 .download-view .download-info-card-container .download-info-card-device h2 {
   font-size: 2rem;
   color: #7c471d;
+  border-bottom: 0.3rem ridge #7c471d;
+  padding-bottom: 0.5rem;
+  width: 100%;
 }
 
 .download-view .download-info-card-container .download-info-card-device .download-info-card-platform {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   gap: 1rem;
+  width: 100%;
 }
 
 .download-view .download-info-card-container .download-info-card-device .download-info-card-platform h3 {
@@ -97,10 +97,8 @@ import ButtonComp from '@/components/ButtonComp.vue'
 
 .download-view .download-info-card-container .download-info-card-device .download-info-card-platform .download-info-card-platform-btngroup {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 </style>

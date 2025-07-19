@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../views/DownloadingView.vue'),
       props: true,
     },
+    {
+      path: '/group',
+      name: 'group',
+      component: () => import('../views/GroupView.vue'),
+    },
   ],
 })
 
