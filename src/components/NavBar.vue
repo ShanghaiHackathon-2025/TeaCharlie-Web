@@ -2,7 +2,7 @@
   <div class="nav-bar">
     <RouterLink to="/">主页</RouterLink>
     <RouterLink to="/download">下载</RouterLink>
-    <a href="https://user.teacharlie.com/login">账户</a>
+    <a href="#" style="cursor:not-allowed;">登录</a>
   </div>
 </template>
 

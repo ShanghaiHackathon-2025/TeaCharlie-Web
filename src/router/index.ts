@@ -14,6 +14,12 @@ const router = createRouter({
       name: 'download',
       component: () => import('../views/DownloadView.vue'),
     },
+    {
+      path: '/downloading/:device/:os/:arch',
+      name: 'downloading',
+      component: () => import('../views/DownloadingView.vue'),
+      props: true,
+    },
   ],
 })
 
