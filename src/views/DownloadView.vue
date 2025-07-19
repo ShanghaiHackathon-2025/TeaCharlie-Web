@@ -11,10 +11,10 @@ import ButtonComp from '@/components/ButtonComp.vue'
         <div class="download-info-card-platform">
           <h3>Windows</h3>
           <div class="download-info-card-platform-btngroup">
-            <ButtonComp>x64</ButtonComp>
+            <ButtonComp to="/downloading/computer/windows/x64">x64</ButtonComp>
           </div>
         </div>
-        <div class="download-info-card-platform">
+        <!-- <div class="download-info-card-platform">
           <h3>MacOS</h3>
           <div class="download-info-card-platform-btngroup">
             <ButtonComp>Apple Silicon</ButtonComp>
@@ -35,7 +35,7 @@ import ButtonComp from '@/components/ButtonComp.vue'
           <div class="download-info-card-platform-btngroup">
             <ButtonComp>去往App Store下载</ButtonComp>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

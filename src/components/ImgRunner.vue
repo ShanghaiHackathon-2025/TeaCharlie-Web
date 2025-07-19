@@ -4,7 +4,7 @@
       v-if="currentImage"
       :src="currentImage"
       alt="Charlie dance animation"
-      :style="{ opacity: imageLoaded ? 1 : 0 }"
+      :style="{ opacity: imageLoaded? 1 : 0 }"
       @load="onImageLoad"
     />
   </div>
@@ -75,13 +75,11 @@ defineExpose({
 
 <style scoped>
 .charlie-dance {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 .charlie-dance img {
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
 }
 </style>
