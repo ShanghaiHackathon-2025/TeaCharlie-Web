@@ -33,19 +33,21 @@ const images = [
 
 // 示例下载实现:
 // 1. 使用fetch或axios调用下载API
-// const downloadFile = async () => {
-//   const response = await fetch(`/api/download/${props.device}/${props.os}/${props.arch}`)
-//   if (response.ok) {
-//     const blob = await response.blob()
-//     const url = window.URL.createObjectURL(blob)
-//     const a = document.createElement('a')
-//     a.href = url
-//     a.download = 'filename.ext'
-//     document.body.appendChild(a)
-//     a.click()
-//     document.body.removeChild(a)
-//   }
-// }
+const downloadFile = async () => {
+  const response = await fetch(`https://dl.teacharlie.com/release/cdd091bf8a6f1d9fbecd93ebabf555f30ceb719a1b88f4cca29d4ff24fbbb64c/windows-x86_64.zip`)
+  if (response.ok) {
+    const blob = await response.blob()
+    const url = window.URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'teacharlie_windows_x86_64_test.zip'
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+  }
+}
+
+downloadFile()
 //
 // 2. 在mounted或点击事件中调用
 // onMounted(() => {

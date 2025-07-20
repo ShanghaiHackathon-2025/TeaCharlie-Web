@@ -19,12 +19,12 @@ html {
 a {
   color: #7c471d;
   text-decoration: none;
-  border: .2rem ridge #ffffff00;
+  border: .2rem solid #ffffff00;
   padding: .2rem .5rem;
 }
 
 a:hover {
-  border: .2rem ridge #efcb90;
+  border: .2rem solid #efcb90;
 }
 
 ::selection {

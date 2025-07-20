@@ -1,7 +1,12 @@
 <template>
   <div class="team-view">
     <h1 class="title">TeaCharlie Dev</h1>
-    <p class="subtitle">的打工人们</p>
+    <p class="subtitle">茶屿开发团队</p>
+    <h2>介绍</h2>
+    <div class="team-description">
+      <p>由一群热爱技术的人们</p>
+    </div>
+    <h2>成员</h2>
     <div class="team-container">
       <GroupMemberCard v-for="member in members" :key="member.Name" :member="member" />
     </div>
@@ -47,10 +52,25 @@ onMounted(async () => {
   margin-bottom: 0.5rem;
 }
 
+.team-view h2 {
+  font-size: 2rem;
+  color: #7c471d;
+  margin-bottom: 0.5rem;
+}
+
 .team-view .subtitle {
   font-size: 1rem;
   color: #876345;
+  margin-bottom: 1rem;
+}
+
+.team-description {
+  font-size: 1.2rem;
+  color: #7c471d;
   margin-bottom: 2rem;
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .team-container {
