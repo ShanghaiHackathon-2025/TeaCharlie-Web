@@ -62,12 +62,13 @@ import NavBar from './components/NavBar.vue'
 
 /*! main 与 main-container 不可以加背景颜色否则会覆盖掉主页的背景图片 */
 main {
-  height: 100%;
+  height: calc(100% - 3rem);
   width: 100%;
 }
 
 .main-container {
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 </style>
