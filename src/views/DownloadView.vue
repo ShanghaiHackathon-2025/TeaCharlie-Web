@@ -48,7 +48,7 @@ import ButtonComp from '@/components/ButtonComp.vue'
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .download-view .title {
@@ -58,7 +58,8 @@ import ButtonComp from '@/components/ButtonComp.vue'
 }
 
 .download-view .download-info-card-container {
-  width: 80%;
+  /* width: 80%; */
+  width: 100%;
   min-height: 60vh;
   background-color: #edab75;
   border: 1rem ridge #7c471d;

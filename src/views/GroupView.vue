@@ -1,6 +1,6 @@
 <template>
   <div class="team-view">
-    <h1 class="title">TeaCharlie Dev</h1>
+    <h1 class="title">TeamNil</h1>
     <p class="subtitle">茶屿开发团队</p>
     <h2>介绍</h2>
     <div class="team-description">
@@ -8,7 +8,15 @@
     </div>
     <h2>成员</h2>
     <div class="team-container">
-      <GroupMemberCard v-for="member in members" :key="member.Name" :member="member" />
+      <GroupMemberCard
+        v-for="member in members"
+        :key="member.Name"
+        :member="member"
+        @showBigCard="showBigCard"
+      />
+    </div>
+    <div v-if="selectedMember" class="big-card-container" @click.self="selectedMember = null">
+      <GroupMemberCardBig :member="selectedMember" @close="selectedMember = null" />
     </div>
   </div>
 </template>
@@ -16,15 +24,23 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import GroupMemberCard from '@/components/GroupMemberCard.vue'
+import GroupMemberCardBig from '@/components/GroupMemberCardBig.vue'
 
 interface Member {
   Name: string
   Title: string
   Avatar: string
   Bio: string
+  Link?: string
+  Desc: string
 }
 
 const members = ref<Member[]>([])
+const selectedMember = ref<Member | null>(null)
+
+const showBigCard = (member: Member) => {
+  selectedMember.value = member
+}
 
 onMounted(async () => {
   try {
@@ -35,6 +51,22 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style scoped>
+.big-card-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+</style>
 
 <style scoped>
 .team-view {
