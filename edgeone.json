@@ -1,0 +1,8 @@
+{
+  "caches": [
+    {
+      "source": "/*",
+      "cacheTtl": 300
+    }
+  ]
+}
