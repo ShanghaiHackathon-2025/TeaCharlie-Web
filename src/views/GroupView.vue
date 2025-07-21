@@ -43,7 +43,8 @@ onMounted(async () => {
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .team-view .title {
@@ -53,9 +54,15 @@ onMounted(async () => {
 }
 
 .team-view h2 {
+  /* font-size: 2rem;
+  color: #7c471d;
+  margin-bottom: 0.5rem; */
+  width: 100%;
   font-size: 2rem;
   color: #7c471d;
-  margin-bottom: 0.5rem;
+  border-bottom: 0.3rem ridge #7c471d;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .team-view .subtitle {
@@ -74,7 +81,7 @@ onMounted(async () => {
 }
 
 .team-container {
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
