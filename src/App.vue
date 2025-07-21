@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import NavBar from './components/NavBar.vue'
+import FooterComp from './components/FooterComp.vue';
+
+const route = useRoute()
 </script>
 
 <template>
@@ -18,6 +21,7 @@ import NavBar from './components/NavBar.vue'
     <main>
       <div class="main-container">
           <RouterView />
+          <FooterComp v-if="route.name !== 'home'" />
       </div>
     </main>
   </div>
