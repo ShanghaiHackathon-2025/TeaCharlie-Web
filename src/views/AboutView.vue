@@ -24,12 +24,14 @@
 
 <style scoped>
 .about-view {
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: #c1eae6;
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .about-view .title {
@@ -39,8 +41,7 @@
 }
 
 .about-content {
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
