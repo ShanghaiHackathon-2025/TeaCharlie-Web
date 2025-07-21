@@ -13,6 +13,9 @@
       <div class="big-card-avatar" v-if="member.Avatar">
         <img :src="member.Avatar" :alt="member.Name" />
       </div>
+      <div class="big-card-link" v-if="member.Link">
+        <button @click="openLink">{{ isGithubLink(member.Link) ? '访问GitHub' : '访问网站' }}</button>
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +28,7 @@ const props = defineProps<{
     Avatar?: string
     Bio: string
     Desc?: string
+    Link?: string
   }
 }>()
 
@@ -32,6 +36,16 @@ const emit = defineEmits(['close'])
 
 const close = () => {
   emit('close')
+}
+
+const isGithubLink = (url?: string) => {
+  return url?.includes('github.com')
+}
+
+const openLink = () => {
+  if (props.member.Link) {
+    window.open(props.member.Link, '_blank')
+  }
 }
 </script>
 
@@ -102,5 +116,28 @@ const close = () => {
   max-width: 200px;
   max-height: 200px;
   border: 0.5rem ridge #7c471d;
+}
+
+.big-card-link {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.big-card-link button {
+  background-color: #7c471d;
+  color: white;
+  border: 0.3rem ridge #7c471d;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: 'Unifont';
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.big-card-link button:hover {
+  background-color: #5a3515;
+  border-color: #5a3515;
 }
 </style>
