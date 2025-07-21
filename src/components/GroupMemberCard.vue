@@ -1,7 +1,7 @@
 <template>
   <div
     class="team-card"
-    @click="navigate(member.Link)"
+    @click="handleClick"
     :data-has-link="member.Link ? '' : null"
   >
     <div class="team-card-header">
@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   member: {
     Name: string
     Title: string
@@ -24,9 +24,13 @@ defineProps<{
   }
 }>()
 
-const navigate = (url?: string) => {
-  if (url) {
-    window.open(url, '_blank')
+const emit = defineEmits(['showBigCard'])
+
+const handleClick = () => {
+  if (props.member.Link) {
+    window.open(props.member.Link, '_blank')
+  } else {
+    emit('showBigCard', props.member)
   }
 }
 </script>
@@ -42,14 +46,26 @@ const navigate = (url?: string) => {
   height: 100%;
   position: relative;
   transition: transform 0.2s;
-}
-
-.team-card[data-has-link] {
   cursor: pointer;
 }
 
 .team-card[data-has-link]:hover::after {
   content: '访问网站';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.team-card:not([data-has-link]):hover::after {
+  content: '显示详情';
   position: absolute;
   top: 0;
   left: 0;
